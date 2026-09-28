@@ -1,0 +1,175 @@
+﻿using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+
+namespace Platform.Api.Endpoints;
+
+public static class SecureEndpoints
+{
+    public static void MapSecureEndpoints(this WebApplication app)
+    {
+        var secureGroup = app.MapGroup("/api/secure")
+            .RequireAuthorization()
+            .WithTags("Secure");
+
+        // GET: Retrieve user profile
+        secureGroup.MapGet("/profile", [Authorize] (ClaimsPrincipal user) =>
+        {
+            var userId = user.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var email = user.FindFirst(ClaimTypes.Email)?.Value;
+            var tenantId = user.FindFirst("tenant_id")?.Value;
+
+            return Results.Ok(new
+            {
+                userId,
+                email,
+                tenantId,
+                message = "This is a secured endpoint"
+            });
+        })
+        .WithName("GetUserProfile")
+        .WithDescription("Get authenticated user profile")
+        .WithOpenApi();
+
+        // GET: Retrieve all items (secured)
+        secureGroup.MapGet("/items", [Authorize] (ClaimsPrincipal user) =>
+        {
+            var tenantId = user.FindFirst("tenant_id")?.Value;
+            
+            var items = new[]
+            {
+                new { Id = 1, Name = "Item 1", TenantId = tenantId },
+                new { Id = 2, Name = "Item 2", TenantId = tenantId },
+                new { Id = 3, Name = "Item 3", TenantId = tenantId }
+            };
+
+            return Results.Ok(new
+            {
+                data = items,
+                count = items.Length
+            });
+        })
+        .WithName("GetItems")
+        .WithDescription("Get all items for authenticated user")
+        .WithOpenApi();
+
+        // GET: Retrieve specific item by ID (secured)
+        secureGroup.MapGet("/items/{id:int}", [Authorize] (int id, ClaimsPrincipal user) =>
+        {
+            var tenantId = user.FindFirst("tenant_id")?.Value;
+
+            if (id <= 0)
+            {
+                return Results.BadRequest(new { error = "Invalid item ID" });
+            }
+
+            var item = new { Id = id, Name = $"Item {id}", TenantId = tenantId };
+            return Results.Ok(item);
+        })
+        .WithName("GetItemById")
+        .WithDescription("Get specific item by ID")
+        .WithOpenApi();
+
+        // POST: Create new item (secured)
+        secureGroup.MapPost("/items", [Authorize] (CreateItemRequest request, ClaimsPrincipal user) =>
+        {
+            var userId = user.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var tenantId = user.FindFirst("tenant_id")?.Value;
+
+            if (string.IsNullOrWhiteSpace(request.Name))
+            {
+                return Results.BadRequest(new { error = "Item name is required" });
+            }
+
+            var newItem = new
+            {
+                Id = new Random().Next(1, 1000),
+                Name = request.Name,
+                Description = request.Description,
+                CreatedBy = userId,
+                TenantId = tenantId,
+                CreatedAt = DateTime.UtcNow
+            };
+
+            return Results.Created($"/api/secure/items/{newItem.Id}", newItem);
+        })
+        .WithName("CreateItem")
+        .WithDescription("Create a new item")
+        .WithOpenApi();
+
+        // PUT: Update item (secured)
+        secureGroup.MapPut("/items/{id:int}", [Authorize] (int id, UpdateItemRequest request, ClaimsPrincipal user) =>
+        {
+            var userId = user.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var tenantId = user.FindFirst("tenant_id")?.Value;
+
+            if (id <= 0)
+            {
+                return Results.BadRequest(new { error = "Invalid item ID" });
+            }
+
+            if (string.IsNullOrWhiteSpace(request.Name))
+            {
+                return Results.BadRequest(new { error = "Item name is required" });
+            }
+
+            var updatedItem = new
+            {
+                Id = id,
+                Name = request.Name,
+                Description = request.Description,
+                UpdatedBy = userId,
+                TenantId = tenantId,
+                UpdatedAt = DateTime.UtcNow
+            };
+
+            return Results.Ok(updatedItem);
+        })
+        .WithName("UpdateItem")
+        .WithDescription("Update an existing item")
+        .WithOpenApi();
+
+        // DELETE: Delete item (secured)
+        secureGroup.MapDelete("/items/{id:int}", [Authorize] (int id, ClaimsPrincipal user) =>
+        {
+            var userId = user.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var tenantId = user.FindFirst("tenant_id")?.Value;
+
+            if (id <= 0)
+            {
+                return Results.BadRequest(new { error = "Invalid item ID" });
+            }
+
+            return Results.Ok(new
+            {
+                message = $"Item {id} deleted successfully",
+                deletedBy = userId,
+                tenantId
+            });
+        })
+        .WithName("DeleteItem")
+        .WithDescription("Delete an item");
+
+        // Admin-only endpoint example (requires specific role/claim)
+        secureGroup.MapGet("/admin/stats", [Authorize] (ClaimsPrincipal user) =>
+        {
+            var tenantId = user.FindFirst("tenant_id")?.Value;
+
+            // In a real application, you would check for admin role
+            // if (!user.IsInRole("Admin")) return Results.Forbid();
+
+            return Results.Ok(new
+            {
+                totalUsers = 100,
+                totalItems = 500,
+                tenantId,
+                timestamp = DateTime.UtcNow
+            });
+        })
+        .WithName("GetAdminStats")
+        .WithDescription("Get admin statistics (admin only)")
+        .WithOpenApi();
+    }
+}
+
+public record CreateItemRequest(string Name, string? Description);
+public record UpdateItemRequest(string Name, string? Description);

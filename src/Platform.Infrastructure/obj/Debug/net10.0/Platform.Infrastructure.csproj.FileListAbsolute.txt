@@ -1,0 +1,15 @@
+D:\Riko\Undian\src\Platform.Infrastructure\bin\Debug\net10.0\Platform.Infrastructure.deps.json
+D:\Riko\Undian\src\Platform.Infrastructure\bin\Debug\net10.0\Platform.Infrastructure.dll
+D:\Riko\Undian\src\Platform.Infrastructure\bin\Debug\net10.0\Platform.Infrastructure.pdb
+D:\Riko\Undian\src\Platform.Infrastructure\bin\Debug\net10.0\Platform.Domain.dll
+D:\Riko\Undian\src\Platform.Infrastructure\bin\Debug\net10.0\Platform.Domain.pdb
+D:\Riko\Undian\src\Platform.Infrastructure\obj\Debug\net10.0\Platform.Infrastructure.csproj.AssemblyReference.cache
+D:\Riko\Undian\src\Platform.Infrastructure\obj\Debug\net10.0\Platform.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Riko\Undian\src\Platform.Infrastructure\obj\Debug\net10.0\Platform.Infrastructure.AssemblyInfoInputs.cache
+D:\Riko\Undian\src\Platform.Infrastructure\obj\Debug\net10.0\Platform.Infrastructure.AssemblyInfo.cs
+D:\Riko\Undian\src\Platform.Infrastructure\obj\Debug\net10.0\Platform.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Riko\Undian\src\Platform.Infrastructure\obj\Debug\net10.0\Platform.A293A272.Up2Date
+D:\Riko\Undian\src\Platform.Infrastructure\obj\Debug\net10.0\Platform.Infrastructure.dll
+D:\Riko\Undian\src\Platform.Infrastructure\obj\Debug\net10.0\refint\Platform.Infrastructure.dll
+D:\Riko\Undian\src\Platform.Infrastructure\obj\Debug\net10.0\Platform.Infrastructure.pdb
+D:\Riko\Undian\src\Platform.Infrastructure\obj\Debug\net10.0\ref\Platform.Infrastructure.dll

@@ -1,0 +1,43 @@
+﻿using System.Reflection;
+
+namespace Platform.Api.Extensions;
+
+public static class EndpointExtensions
+{
+    /// <summary>
+    /// Maps all endpoints in the application automatically using reflection
+    /// </summary>
+    public static WebApplication MapAllEndpoints(this WebApplication app)
+    {
+        var assembly = Assembly.GetExecutingAssembly();
+        
+        // Find all static methods that match the pattern Map*Endpoints
+        var endpointMethods = assembly.GetTypes()
+            .SelectMany(t => t.GetMethods(BindingFlags.Static | BindingFlags.Public))
+            .Where(m => m.Name.StartsWith("Map") && 
+                       m.Name.EndsWith("Endpoints") &&
+                       m.GetParameters().Length == 1 &&
+                       m.GetParameters()[0].ParameterType == typeof(WebApplication) &&
+                       m.ReturnType == typeof(void));
+
+        foreach (var method in endpointMethods)
+        {
+            method.Invoke(null, [app]);
+        }
+
+        return app;
+    }
+
+    /// <summary>
+    /// Manual registration of all endpoints (alternative approach)
+    /// </summary>
+    public static WebApplication MapApplicationEndpoints(this WebApplication app)
+    {
+        // Register all endpoints here
+        app.MapAuthEndpoints();
+        app.MapSecureEndpoints();
+        // Add more endpoint mappings here as needed
+        
+        return app;
+    }
+}

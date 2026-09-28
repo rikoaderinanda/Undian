@@ -1,0 +1,15 @@
+D:\Riko\Undian\src\Platform.Application\bin\Debug\net10.0\Platform.Application.deps.json
+D:\Riko\Undian\src\Platform.Application\bin\Debug\net10.0\Platform.Application.dll
+D:\Riko\Undian\src\Platform.Application\bin\Debug\net10.0\Platform.Application.pdb
+D:\Riko\Undian\src\Platform.Application\bin\Debug\net10.0\Platform.Domain.dll
+D:\Riko\Undian\src\Platform.Application\bin\Debug\net10.0\Platform.Domain.pdb
+D:\Riko\Undian\src\Platform.Application\obj\Debug\net10.0\Platform.Application.csproj.AssemblyReference.cache
+D:\Riko\Undian\src\Platform.Application\obj\Debug\net10.0\Platform.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Riko\Undian\src\Platform.Application\obj\Debug\net10.0\Platform.Application.AssemblyInfoInputs.cache
+D:\Riko\Undian\src\Platform.Application\obj\Debug\net10.0\Platform.Application.AssemblyInfo.cs
+D:\Riko\Undian\src\Platform.Application\obj\Debug\net10.0\Platform.Application.csproj.CoreCompileInputs.cache
+D:\Riko\Undian\src\Platform.Application\obj\Debug\net10.0\Platform.54CC008C.Up2Date
+D:\Riko\Undian\src\Platform.Application\obj\Debug\net10.0\Platform.Application.dll
+D:\Riko\Undian\src\Platform.Application\obj\Debug\net10.0\refint\Platform.Application.dll
+D:\Riko\Undian\src\Platform.Application\obj\Debug\net10.0\Platform.Application.pdb
+D:\Riko\Undian\src\Platform.Application\obj\Debug\net10.0\ref\Platform.Application.dll

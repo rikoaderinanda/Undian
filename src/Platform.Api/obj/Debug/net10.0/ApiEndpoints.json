@@ -1,0 +1,198 @@
+[
+  {
+    "ContainingType": "Platform.Api.Endpoints.SecureEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapSecureEndpoints\u003Eb__0_6",
+    "RelativePath": "api/secure/admin/stats",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Secure"
+    ],
+    "EndpointName": "GetAdminStats",
+    "Description": "Get admin statistics (admin only)"
+  },
+  {
+    "ContainingType": "Platform.Api.Endpoints.SecureEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapSecureEndpoints\u003Eb__0_1",
+    "RelativePath": "api/secure/items",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Secure"
+    ],
+    "EndpointName": "GetItems",
+    "Description": "Get all items for authenticated user"
+  },
+  {
+    "ContainingType": "Platform.Api.Endpoints.SecureEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapSecureEndpoints\u003Eb__0_3",
+    "RelativePath": "api/secure/items",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Platform.Api.Endpoints.CreateItemRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Secure"
+    ],
+    "EndpointName": "CreateItem",
+    "Description": "Create a new item"
+  },
+  {
+    "ContainingType": "Platform.Api.Endpoints.SecureEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapSecureEndpoints\u003Eb__0_2",
+    "RelativePath": "api/secure/items/{id:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Secure"
+    ],
+    "EndpointName": "GetItemById",
+    "Description": "Get specific item by ID"
+  },
+  {
+    "ContainingType": "Platform.Api.Endpoints.SecureEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapSecureEndpoints\u003Eb__0_4",
+    "RelativePath": "api/secure/items/{id:int}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Platform.Api.Endpoints.UpdateItemRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Secure"
+    ],
+    "EndpointName": "UpdateItem",
+    "Description": "Update an existing item"
+  },
+  {
+    "ContainingType": "Platform.Api.Endpoints.SecureEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapSecureEndpoints\u003Eb__0_5",
+    "RelativePath": "api/secure/items/{id:int}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Secure"
+    ],
+    "EndpointName": "DeleteItem",
+    "Description": "Delete an item"
+  },
+  {
+    "ContainingType": "Platform.Api.Endpoints.SecureEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CMapSecureEndpoints\u003Eb__0_0",
+    "RelativePath": "api/secure/profile",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Secure"
+    ],
+    "EndpointName": "GetUserProfile",
+    "Description": "Get authenticated user profile"
+  },
+  {
+    "ContainingType": "Platform.Api.Endpoints.AuthEndpoints\u002B\u003C\u003Ec__DisplayClass0_0",
+    "Method": "\u003CMapAuthEndpoints\u003Eb__0",
+    "RelativePath": "auth/login",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Auth"
+    ],
+    "EndpointName": "Login"
+  }
+]

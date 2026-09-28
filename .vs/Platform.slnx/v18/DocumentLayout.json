@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Riko\\Undian\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA9EDB2-3C10-9B0A-3262-8112643A659A}|src\\Platform.Api\\Platform.Api.csproj|d:\\riko\\undian\\src\\platform.api\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CA9EDB2-3C10-9B0A-3262-8112643A659A}|src\\Platform.Api\\Platform.Api.csproj|solutionrelative:src\\platform.api\\middleware\\exceptionmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA9EDB2-3C10-9B0A-3262-8112643A659A}|src\\Platform.Api\\Platform.Api.csproj|d:\\riko\\undian\\src\\platform.api\\extensions\\authenticationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CA9EDB2-3C10-9B0A-3262-8112643A659A}|src\\Platform.Api\\Platform.Api.csproj|solutionrelative:src\\platform.api\\extensions\\authenticationextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6CA9EDB2-3C10-9B0A-3262-8112643A659A}|src\\Platform.Api\\Platform.Api.csproj|d:\\riko\\undian\\src\\platform.api\\endpoints\\authendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CA9EDB2-3C10-9B0A-3262-8112643A659A}|src\\Platform.Api\\Platform.Api.csproj|solutionrelative:src\\platform.api\\endpoints\\authendpoints.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExceptionMiddleware.cs",
+              "DocumentMoniker": "D:\\Riko\\Undian\\src\\Platform.Api\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeDocumentMoniker": "src\\Platform.Api\\Middleware\\ExceptionMiddleware.cs",
+              "ToolTip": "D:\\Riko\\Undian\\src\\Platform.Api\\Middleware\\ExceptionMiddleware.cs",
+              "RelativeToolTip": "src\\Platform.Api\\Middleware\\ExceptionMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T07:18:49.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthenticationExtensions.cs",
+              "DocumentMoniker": "D:\\Riko\\Undian\\src\\Platform.Api\\Extensions\\AuthenticationExtensions.cs",
+              "RelativeDocumentMoniker": "src\\Platform.Api\\Extensions\\AuthenticationExtensions.cs",
+              "ToolTip": "D:\\Riko\\Undian\\src\\Platform.Api\\Extensions\\AuthenticationExtensions.cs",
+              "RelativeToolTip": "src\\Platform.Api\\Extensions\\AuthenticationExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T07:16:54.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthEndpoints.cs",
+              "DocumentMoniker": "D:\\Riko\\Undian\\src\\Platform.Api\\EndPoints\\AuthEndpoints.cs",
+              "RelativeDocumentMoniker": "src\\Platform.Api\\EndPoints\\AuthEndpoints.cs",
+              "ToolTip": "D:\\Riko\\Undian\\src\\Platform.Api\\EndPoints\\AuthEndpoints.cs",
+              "RelativeToolTip": "src\\Platform.Api\\EndPoints\\AuthEndpoints.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T07:15:21.237Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
